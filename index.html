@@ -3,85 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Feedback Form</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-       <link rel="stylesheet" href="style.css">
-            <fieldset>
-            <form>
-                <h1>Student's Feedback Form</h1>
-                <h2>Course: Successive Differentiation and Differential Equation</h2>
-                <fieldset>
-                    <h3>Personal Details</h3>
-                    <lable>Students name</lable><br>
-                    <input type="text" placeholder="Enter Your name"><br><br>
-                    <lable>Email Id</lable><br>
-                    <input type="characters" placeholder="Enter Email Id"><br><br>
-                    <label>Mobile Number</label><br>
-                    <input type="numbers" placeholder="Enter your number"><br><br>
-                    <label>Registration Number</label><br>
-                    <input type="number" name="Registration Number"><br>
-            </fieldset>
-            <fieldset>
-                <h3>Section A: Overall Evaluation</h3>
-                <lable>How satisfied are you with the overall experience?</lable><br>
-                <input type="radio" name="How satisfied are you with the overall experience?" value="Very Satisfied">Very Satisfied<br>
-                <input type="radio" name="How satisfied are you with the overall experience?" value="Satisfied">Satisfied<br>
-                <input type="radio" name="How satisfied are you with the overall experience?" value="Neutral">Neutral<br>
-                <input type="radio" name="How satisfied are you with the overall experience?" value="Dissatisfied">Dissatisfied<br>
-                <input type="radio" name="How satisfied are you with the overall experience?" value="Very Dissatisfied">Very Dissatisfied<br><br>
 
-                <lable>Content Revelence:</lable><br>
-                <input type="radio" name="Content Relevance" value="Relevant">Relavant<br>
-                <input type="radio" name="Content Relevance" value="Trrelevant">Irrelevant<br><br>
+<body class="bg-light">
 
-                <lable>Presentation Clarity and Time Management:</lable><br>
-                <input type="radio" name="Presentation Clarity and Time Management" value="Good">Good<br>
-                <input type="radio" name="Presentation Clarity and Time Management" value="Bad">Bad<br>
+<!-- ✅ NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="#">Feedback System</a>
 
-             </fieldset>
-             <fieldset>
-                <h3>Section B: Detailed Feedback</h3>
-                <label>What did you find most valuable?</label><br>
-                <textarea name="What did you find most valuable?" rows="6" cols="40"></textarea><br><br>
-                <label>What areas need improvement?</label><br>
-                <textarea name="What areas need improvement?" rows="5" cols="30"></textarea><br><br>
-                <label>How likely are you to recommend this session to others?</label><br>
-                
-                <input type="radio" name="How likely are you to recommend this session/project to others?" value="Definately">Definately<br>
-                <input type="radio" name="How likely are you to recommend this session/project to others?" value="Probably">Probably<br>
-                <input type="radio" name="How likely are you to recommend this session/project to others?" value="Probably Not">Probably Not<br>
-                <input type="radio" name="How likely are you to recommend this session/project to others?" value="Not Sure">Not Sure<br>
-                <input type="radio" name="How likely are you to recommend this session/project to others?" value="Definately Not">Definately Not<br>
-             </fieldset>
-             <fieldset>
-                <h3>Section C: Open-Ended Insights</h3>
-                <label>Suggestions for future topics or improvements:</label><br>
-                <textarea name="Suggestions for future topics or improvements:" rows="2" cols="30"></textarea><br><br>
-                <label>Any challenges faced during participation (technical, organizational, etc.):</label><br>
-                <textarea name="Any challenges faced during participation (technical, organizational, etc.):" rows="2" cols="30"></textarea><br><br>
-                <label>Additional Comments or Testimonials:</label><br>
-                <textarea name="Additional Comments or Testimonials:" rows="2" cols="30"></textarea><br>
-             </fieldset>
-             <fieldset>
-                <h3>Section D: Weighted Criteria</h3>
-                <h4>Please assign importance (Excellent/Good/Bad) to the following factors:</h4>
-                <label>Content Depth:</label><br>
-                <input type="radio" name="Content Depth:" value="Excellent">Excellent
-                <input type="radio" name="Content Depth:" value="Good">Good
-                <input type="radio" name="Content Depth:" value="Bad">Bad<br><br>
-                <label>Practical application:</label><br>
-                <input type="radio" name="Practical application:" value="Excellent">Excellent
-                <input type="radio" name="Practical application:" value="Good">Good
-                <input type="radio" name="Practical application:" value="Bad">Bad<br><br>
-                <label>Peer Interaction:</label><br>
-                <input type="radio" name="Peer interaction:" value="Excellent">Excellent
-                <input type="radio" name="Peer interaction:" value="Good">Good
-                <input type="radio" name="Peer interaction:" value="Bad">Bad<br>
-             </fieldset>
-             <button>Submit</button>
-            </form>
-            </fieldset>
-       
-</body> 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Feedback</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ✅ CAROUSEL -->
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://via.placeholder.com/1200x300/0d6efd/ffffff?text=Student+Feedback+System" class="d-block w-100">
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://via.placeholder.com/1200x300/198754/ffffff?text=Give+Your+Feedback" class="d-block w-100">
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://via.placeholder.com/1200x300/ffc107/000000?text=Improve+Learning+Experience" class="d-block w-100">
+    </div>
+  </div>
+
+</div>
+
+<!-- ✅ FORM SECTION -->
+<div class="container my-5">
+
+    <div class="card shadow p-4">
+
+        <h2 class="text-center text-primary">Student's Feedback Form</h2>
+        <p class="text-center">Course: Successive Differentiation and Differential Equation</p>
+
+        <form>
+
+            <!-- ✅ GRID SYSTEM START -->
+            <div class="row">
+
+                <!-- Personal Details -->
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-header bg-secondary text-white">Personal Details</div>
+                        <div class="card-body">
+
+                            <label class="form-label">Student Name</label>
+                            <input type="text" class="form-control mb-2">
+
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control mb-2">
+
+                            <label class="form-label">Mobile</label>
+                            <input type="tel" class="form-control mb-2">
+
+                            <label class="form-label">Registration No</label>
+                            <input type="number" class="form-control">
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section A -->
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-header bg-info text-white">Overall Evaluation</div>
+                        <div class="card-body">
+
+                            <p>Satisfaction Level:</p>
+                            <div class="form-check">
+                                <input type="radio" name="sat"> Very Satisfied
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" name="sat"> Satisfied
+                            </div>
+
+                            <p class="mt-3">Content Relevance:</p>
+                            <div class="form-check">
+                                <input type="radio" name="content"> Relevant
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" name="content"> Irrelevant
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ✅ GRID END -->
+
+            <!-- Section B -->
+            <div class="card mb-3">
+                <div class="card-header bg-warning">Detailed Feedback</div>
+                <div class="card-body">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Most Valuable Part</label>
+                            <textarea class="form-control"></textarea>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Areas to Improve</label>
+                            <textarea class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Section C -->
+            <div class="card mb-3">
+                <div class="card-header bg-success text-white">Suggestions</div>
+                <div class="card-body">
+
+                    <textarea class="form-control mb-2" placeholder="Suggestions"></textarea>
+                    <textarea class="form-control mb-2" placeholder="Challenges"></textarea>
+                    <textarea class="form-control" placeholder="Comments"></textarea>
+
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="text-center">
+                <button class="btn btn-primary px-5">Submit</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
